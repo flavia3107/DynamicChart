@@ -1,12 +1,11 @@
 import React from "react";
-import { ChartType } from "../App";
 
 interface ChartSelectorProps {
-  chartType: ChartType;
-  setChartType: (type: ChartType) => void;
+  chartType;
+  setChartType: (type) => void;
 }
 
-const chartOptions: ChartType[] = ["bar", "line", "pie"];
+const chartOptions = ["bar", "line", "pie"];
 
 const ChartSelector: React.FC<ChartSelectorProps> = ({ chartType, setChartType }) => {
   return (
@@ -15,7 +14,7 @@ const ChartSelector: React.FC<ChartSelectorProps> = ({ chartType, setChartType }
       <select
         id="chart-select"
         value={chartType}
-        onChange={(e) => setChartType(e.target.value as ChartType)}
+        onChange={(e) => setChartType(e.target.value)}
       >
         {chartOptions.map((type) => (
           <option key={type} value={type}>

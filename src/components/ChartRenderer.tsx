@@ -17,7 +17,6 @@ import {
   Legend,
   Title,
 } from "chart.js";
-import { ChartType } from "../App";
 
 // Register components
 ChartJS.register(
@@ -33,7 +32,7 @@ ChartJS.register(
 );
 
 interface ChartRendererProps {
-  chartType: ChartType;
+  chartType;
   parsedData: { labels: string[]; values: number[] } | null;
 }
 
