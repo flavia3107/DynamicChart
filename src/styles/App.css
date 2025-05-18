@@ -11,3 +11,14 @@ h1 {
   font-size: 1.8rem;
   text-align: center;
 }
+.chart-selector {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chart-selector select {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
