@@ -1,28 +1,18 @@
-import { useState } from "react";
-import ChartSelector from "./components/ChartSelector";
-import DataInput from "./components/DataInput";
-import ChartRenderer from "./components/ChartRenderer";
-import "./styles/App.css";
+import React, { useState } from "react";
+import ChartSidebar from "./components/ChartSidebar";
+import ChartGrid from "./components/ChartGrid"; // we'll build this next
+import { ChartCategory } from "./data/chartGroups";
 
-export type ChartType = "bar" | "line" | "pie";
-
-function App() {
-  const [chartType, setChartType] = useState<ChartType>("bar");
-  const [rawData, setRawData] = useState<string>("");
-  const [parsedData, setParsedData] = useState<any>(null); // Will define type later
+export default function App() {
+  const [selectedGroup, setSelectedGroup] = useState<ChartCategory>("bar");
 
   return (
-    <div className="app-container">
-      <h1>Dynamic Chart Playground</h1>
-      <ChartSelector chartType={chartType} setChartType={setChartType} />
-      <DataInput
-        rawData={rawData}
-        setRawData={setRawData}
-        setParsedData={setParsedData}
-      />
-      <ChartRenderer chartType={chartType} parsedData={parsedData} />
+    <div style={{ display: "flex", height: "100vh" }}>
+      <ChartSidebar selectedGroup={selectedGroup} onSelectGroup={setSelectedGroup} />
+      <main style={{ flexGrow: 1, padding: 20 }}>
+        {/* ChartGrid will render charts based on selectedGroup */}
+        <ChartGrid selectedGroup={selectedGroup} />
+      </main>
     </div>
   );
 }
-
-export default App;
