@@ -7,7 +7,7 @@ export default function App() {
   const [selectedGroup, setSelectedGroup] = useState<ChartCategory>("bar");
 
   return (
-    <div style={{ display: "flex", height: "100vh" }}>
+    <div style={{ display: "flex", height: "100vh", width: "100vw" }}>
       <ChartSidebar selectedGroup={selectedGroup} onSelectGroup={setSelectedGroup} />
       <main style={{ flexGrow: 1, padding: 20 }}>
         {/* ChartGrid will render charts based on selectedGroup */}

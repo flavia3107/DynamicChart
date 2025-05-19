@@ -130,9 +130,10 @@ export default function ChartCard({ chart }: Props) {
         borderRadius: 8,
         padding: 12,
         userSelect: "none",
-        height: 200,
+        height: '25vw',
         display: "flex",
         flexDirection: "column",
+        minHeight: '20rem'
       }}
     >
       <div
