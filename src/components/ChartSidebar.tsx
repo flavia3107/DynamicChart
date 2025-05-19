@@ -6,7 +6,7 @@ type Props = {
   onSelectGroup: (group: ChartCategory) => void;
 };
 
-const groups: ChartCategory[] = ["bar", "line", "pie", "area"];
+const groups: ChartCategory[] = [ "bar", "line", "area", "pie", "radar", "funnel", "gauge", "scatter"];
 
 export default function ChartSidebar({ selectedGroup, onSelectGroup }: Props) {
   return (
