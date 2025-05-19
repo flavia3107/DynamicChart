@@ -24,3 +24,6 @@ export const chartGroups: Record<ChartCategory, ChartDefinition[]> = {
 		{ id: "area", title: "Area Chart", type: "area" },
 	],
 };
+
+// add more chart types 
+// implement input/upload
