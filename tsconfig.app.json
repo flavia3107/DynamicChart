@@ -3,6 +3,7 @@
     "esModuleInterop": true,
     "module": "ESNext",
     "moduleResolution": "Node",
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "lib": ["dom", "es2016"]
   }
 }

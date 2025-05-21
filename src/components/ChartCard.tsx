@@ -1,3 +1,4 @@
+// src/components/ChartCard.tsx
 import React, { useLayoutEffect, useRef } from "react";
 import * as am5 from "@amcharts/amcharts5";
 import * as am5xy from "@amcharts/amcharts5/xy";
@@ -16,7 +17,6 @@ export default function ChartCard({ chart }: Props) {
 
     const root = am5.Root.new(chartDiv.current);
 
-    // Create a container for the chart
     const container = root.container.children.push(
       am5.Container.new(root, {
         width: am5.percent(100),
@@ -25,8 +25,8 @@ export default function ChartCard({ chart }: Props) {
       })
     );
 
-    // Create chart based on chart type
-    if (chart.type === "bar" || chart.type === "line" || chart.type === "area") {
+    // Updated to include "column"
+    if (["bar", "line", "area"].includes(chart.type) || chart.id.includes("column")) {
       const chartXY = container.children.push(
         am5xy.XYChart.new(root, {
           panX: false,
@@ -37,7 +37,6 @@ export default function ChartCard({ chart }: Props) {
         })
       );
 
-      // Create axes
       const xAxis = chartXY.xAxes.push(
         am5xy.CategoryAxis.new(root, {
           categoryField: "category",
@@ -51,7 +50,6 @@ export default function ChartCard({ chart }: Props) {
         })
       );
 
-      // Sample data
       const data = [
         { category: "A", value: 40 },
         { category: "B", value: 55 },
@@ -61,7 +59,6 @@ export default function ChartCard({ chart }: Props) {
 
       xAxis.data.setAll(data);
 
-      // Create series
       const series = chartXY.series.push(
         am5xy.ColumnSeries.new(root, {
           name: chart.title,
@@ -76,7 +73,7 @@ export default function ChartCard({ chart }: Props) {
 
       if (chart.type === "line" || chart.type === "area") {
         series.columns?.template.set("visible", false);
-        series['strokes']?.template.setAll({
+        series["strokes"]?.template.setAll({
           strokeWidth: 2,
           stroke: am5.color(0x0066ff),
         });
@@ -90,7 +87,7 @@ export default function ChartCard({ chart }: Props) {
         });
 
         if (chart.type === "area") {
-          series['fills']?.template.setAll({
+          series["fills"]?.template.setAll({
             fillOpacity: 0.3,
             visible: true,
             fill: am5.color(0x0066ff),
@@ -121,7 +118,7 @@ export default function ChartCard({ chart }: Props) {
     return () => {
       root.dispose();
     };
-  }, [chart.type, chart.title]);
+  }, [chart.type, chart.title, chart.id]);
 
   return (
     <div
@@ -130,16 +127,13 @@ export default function ChartCard({ chart }: Props) {
         borderRadius: 8,
         padding: 12,
         userSelect: "none",
-        height: '25vw',
+        height: "25vw",
         display: "flex",
         flexDirection: "column",
-        minHeight: '20rem'
+        minHeight: "20rem",
       }}
     >
-      <div
-        ref={chartDiv}
-        style={{ flexGrow: 1 }}
-      />
+      <div ref={chartDiv} style={{ flexGrow: 1 }} />
       <div style={{ marginTop: 10, textAlign: "center", fontWeight: "bold" }}>
         {chart.title}
       </div>
