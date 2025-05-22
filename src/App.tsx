@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ChartSidebar from "./components/ChartSidebar";
 import ChartGrid from "./components/ChartGrid"; // we'll build this next
 import { ChartCategory } from "./data/chartGroups";

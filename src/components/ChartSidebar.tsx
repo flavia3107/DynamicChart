@@ -1,4 +1,3 @@
-import React from "react";
 import { ChartCategory } from "../data/chartGroups";
 
 type Props = {

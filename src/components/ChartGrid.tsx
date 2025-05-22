@@ -1,6 +1,5 @@
-import React from "react";
 import { chartGroups, ChartCategory, ChartDefinition } from "../data/chartGroups";
-import ChartCard from "./ChartCard"; // we’ll create this next
+import ChartCard from "./ChartCard";
 
 type Props = {
   selectedGroup: ChartCategory;
