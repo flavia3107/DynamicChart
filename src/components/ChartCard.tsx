@@ -122,7 +122,6 @@ export default function ChartCard({ chart }: Props) {
   return (
     <div
       style={{
-        border: "1px solid #ddd",
         borderRadius: 8,
         padding: 12,
         userSelect: "none",
@@ -130,12 +129,14 @@ export default function ChartCard({ chart }: Props) {
         display: "flex",
         flexDirection: "column",
         minHeight: "20rem",
+        boxShadow: "0px 0px 20px -6px #98a1a7",
+        maxHeight: '23rem'
       }}
     >
-      <div ref={chartDiv} style={{ flexGrow: 1 }} />
       <div style={{ marginTop: 10, textAlign: "center", fontWeight: "bold" }}>
         {chart.title}
       </div>
+      <div ref={chartDiv} style={{ flexGrow: 1 }} />
     </div>
   );
 }
