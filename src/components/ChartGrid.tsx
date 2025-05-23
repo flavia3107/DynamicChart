@@ -12,7 +12,7 @@ export default function ChartGrid({ selectedGroup }: Props) {
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(20rem, 1fr))",
+        gridTemplateColumns: "repeat(auto-fit, minmax(15rem, 1fr))",
         gap: 20,
       }}
     >

@@ -17,7 +17,7 @@ export default function ChartSidebar({ selectedGroup, onSelectGroup }: Props) {
             <button
               onClick={() => onSelectGroup(group)}
               style={{
-                background: group === selectedGroup ? "#007bff" : "transparent",
+                background: group === selectedGroup ? "#404040" : "transparent",
                 color: group === selectedGroup ? "#fff" : "#000",
                 border: "none",
                 padding: "8px 12px",
