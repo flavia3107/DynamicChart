@@ -129,8 +129,9 @@ export default function ChartCard({ chart }: Props) {
         display: "flex",
         flexDirection: "column",
         minHeight: "20rem",
-        boxShadow: "0px 0px 20px -6px #98a1a7",
-        maxHeight: '23rem'
+        boxShadow: "0px 0px 20px -6px #d7d7d7",
+        maxHeight: '23rem',
+        background: '#fff'
       }}
     >
       <div style={{ marginTop: 10, textAlign: "center", fontWeight: "bold" }}>
