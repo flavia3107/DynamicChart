@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div style={{ display: "flex", height: "100vh", width: "100vw" }}>
       <ChartSidebar selectedGroup={selectedGroup} onSelectGroup={setSelectedGroup} />
-      <main style={{ flexGrow: 1, padding: 20 }}>
+      <main style={{ flexGrow: 1, padding: 20, display: 'flex', alignItems: 'center' }}>
         {/* ChartGrid will render charts based on selectedGroup */}
         <ChartGrid selectedGroup={selectedGroup} />
       </main>

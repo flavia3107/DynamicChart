@@ -11,9 +11,11 @@ export default function ChartGrid({ selectedGroup }: Props) {
   return (
     <div
       style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(15rem, 23rem))",
-        gap: 20,
+        display: "flex",
+        gap: '1.5rem',
+        flexWrap: 'wrap',
+        height: '100%',
+        padding:'1rem'
       }}
     >
       {charts.map((chart) => (

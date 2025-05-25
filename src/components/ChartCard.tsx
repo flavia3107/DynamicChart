@@ -131,7 +131,9 @@ export default function ChartCard({ chart }: Props) {
         minHeight: "20rem",
         boxShadow: "0px 0px 20px -6px #d7d7d7",
         maxHeight: '23rem',
-        background: '#fff'
+        background: '#fff',
+        minWidth: '20rem',
+        width:'23vw'
       }}
     >
       <div style={{ marginTop: 10, textAlign: "center", fontWeight: "bold" }}>
