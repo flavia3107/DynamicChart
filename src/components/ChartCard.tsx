@@ -124,12 +124,11 @@ export default function ChartCard({ chart }: Props) {
       style={{
         borderRadius: 8,
         padding: 12,
-        userSelect: "none",
         height: "25vw",
         display: "flex",
         flexDirection: "column",
         minHeight: "20rem",
-        boxShadow: "0px 0px 20px -6px #d7d7d7",
+        boxShadow: "0px 0px 20px -6px #edecec",
         maxHeight: '23rem',
         background: '#fff',
         minWidth: '20rem',

@@ -14,7 +14,6 @@ export default function ChartGrid({ selectedGroup }: Props) {
         display: "flex",
         gap: '1.5rem',
         flexWrap: 'wrap',
-        height: '100%',
         padding:'1rem'
       }}
     >
