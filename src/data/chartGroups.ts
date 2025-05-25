@@ -77,3 +77,7 @@ export const chartGroups: Record<ChartCategory, ChartDefinition[]> = {
 
 // add more chart types 
 // implement input/upload
+// on click chart -> open another view -> chart data and upload
+// add summaries and icons for all chart types
+// show all chart types
+
